@@ -1,0 +1,43 @@
+
+@media all and (max-width: 820px) {
+  .navigation {
+    justify-content: space-around;
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .logo{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0F0F0D;
+  }
+  .background{
+  	width: 600px;
+  	height: 450px;
+  }
+  .portada .descripcion{
+  	bottom: 0;
+  	left: 0;
+  	padding: 20px 20px 0 20px;
+  }
+}
+
+@media all and (max-width: 620px) {
+  body{
+    background: red;
+  }
+    .background{
+    	width: 500px;
+    }
+  }
+
+  @media all and (max-width: 520px) {
+    body{
+      background: blue;
+    }
+      .background{
+      	width: 350px;
+      }
+    }
