@@ -1,13 +1,20 @@
 /*
+font-family: 'Lato', sans-serif;
+font-family: 'Quicksand', sans-serif;
 font-family: 'Montserrat', sans-serif;
-font-family: 'Nunito', sans-serif;
 */
 *{
   margin: 0;
 }
 body{
-  font-family: 'Nunito', sans-serif;
   background: #EFEFEF;
+}
+h1, h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+h3, h4, h5{
+  font-family: 'Quicksand', sans-serif;
 }
 h2, h3{
   border-bottom: 2px solid #544F49;
@@ -21,29 +28,40 @@ h2, h3{
 .logo img{
   display: block;
   height: 28px;
-  padding: 8px 12px;
+  padding: 20px 12px;
 }
 .navigation {
   background: #1C3643;
   display: flex;
   justify-content: flex-end;
   margin: 0;
+  padding: 1em;
   list-style: none;
 }
 .navigation a {
-  border-top: 1px solid rgba(255,255,255,0.3);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
   color: white;
   display: block;
   padding: 10px 15px;
   text-decoration: none;
   text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
 }
 .navigation a:hover {
   background: #0F0F0D;
 }
 .sesion{
   background: #FF4842;
+  border-radius: 4px 4px 6px 6px;
+  border-bottom: 3px solid #D0272A;
+  margin: 0 0 0 1em;
+}
+.sesion:hover{/*me cambia solo el borde de abajo si me posiciono solo en ese*/
+  border-bottom: 3px solid #418427;
+}
+.sesion a:hover{
+  background: #7DCD40;
+  border-radius: 4px 4px 4px 4px;
 }
 /*****FIN DEL HEADER******/
 
@@ -103,7 +121,9 @@ h2, h3{
 	padding: 0;
 	margin: 10px 0;
 	color: #040905;
-
+}
+.article-title{
+  margin-top: 15px;
 }
 .article-fecha{
   display: flex;
@@ -115,7 +135,7 @@ h2, h3{
 /*****FIN DE ARTICULOS******/
 
 
-/*****INICIO DE FOOTER******/
+
 .more{
   background: #FFFFFF;
   position: relative;
@@ -134,4 +154,3 @@ h2, h3{
   color: #515151;
   text-decoration: none;
 }
-/*****FIN DE FOOTER******/

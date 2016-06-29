@@ -5,21 +5,24 @@
   <title>Precios</title>
   <link rel="stylesheet" href="css/style.css" class="sty">
   <link href='https://fonts.googleapis.com/css?family=Montserrat|Nunito' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device=width, initial-scale=1">
 </head>
-<body>
-  <header id="header" class="header contenedor">
-    <figure class="logotipo">
-      <img src="images/invie.png" width="186" height="60" alt="Invie logotipo"/>
-    </figure>
-    <nav class="menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#guitarras">Guitarras</a></li>
-        <li><a href="precios.html">Precios</a></li>
-      </ul>
-    </nav>
-  </header>
-
+<body class="precios">
+  <section id="portada" class="portada">
+    <header id="header" class="header contenedor">
+      <figure class="logotipo">
+        <img src="images/invie.png" width="186" height="60" alt="Invie logotipo"/>
+      </figure>
+      <span id="burguer-button" class="burguer-button icon-menu"></span>
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#guitarras">Guitarras</a></li>
+          <li><a href="precios.html">Precios</a></li>
+        </ul>
+      </nav>
+    </header>
+  </section>
   <section class="tabla">
     <div class="contenedor">
       <table>
@@ -92,5 +95,37 @@
       </form>
     </div>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js">
+  </script>
+
+  <script>
+    var $burguerButton = document.getElementById('burguer-button');
+    var $menu = document.getElementById('menu');
+    function toggleMenu(){
+      $menu.classList.toggle('active')
+    };
+
+    var consulta = window.matchMedia('(max-width: 500px)');
+    consulta.addListener(mediaQuery);
+
+    function mediaQuery(){
+      if (consulta.matches) {
+        $burguerButton.addEventListener('touchstart', toggleMenu);
+
+      } else {
+        $burguerButton.removeEventListener('touchstart', toggleMenu);
+      }
+    }
+    mediaQuery();
+
+
+    //lazy loading
+    var bLazy = new Blazy({
+    // options
+    selector: 'img'
+    });
+
+  </script>
 </body>
 </html>
